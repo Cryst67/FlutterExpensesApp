@@ -17,7 +17,10 @@ class TransactionList extends StatelessWidget {
                 Text(
                   'No Transactions Yet',
                   style: TextStyle(
+                    fontFamily: 'Quicksand',
                     fontWeight: FontWeight.bold,
+                    decoration: TextDecoration.none,
+                    color: Colors.black,
                     fontSize: 15,
                   ),
                 ),
