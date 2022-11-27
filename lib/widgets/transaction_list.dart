@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -63,7 +65,9 @@ class TransactionList extends StatelessWidget {
                     ),
                     trailing: IconButton(
                       icon: Icon(Icons.delete),
-                      color: Theme.of(context).errorColor,
+                      color: Platform.isIOS
+                          ? Colors.grey
+                          : Theme.of(context).errorColor,
                       onPressed: () => deleteTx(transactions[i].id),
                     ),
                   ),

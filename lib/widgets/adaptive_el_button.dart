@@ -11,14 +11,14 @@ class AdaptiveElButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Platform.isIOS
         ? CupertinoButton(
-            borderRadius: BorderRadius.circular(100),
             child: Text(
               'Add Transaction',
               style: TextStyle(
                 fontFamily: 'OpenSans',
               ),
             ),
-            onPressed: handler)
+            onPressed: handler,
+          )
         : ElevatedButton(
             onPressed: () => handler,
             child: Text(
